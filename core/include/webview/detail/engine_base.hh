@@ -56,6 +56,9 @@ public:
     return navigate_impl(url);
   }
 
+  noresult set_user_agent(const std::string &user_agent) {
+    return set_user_agent_impl(user_agent);
+  }
   using binding_t = std::function<void(std::string, std::string, void *)>;
   class binding_ctx_t {
   public:
@@ -154,6 +157,7 @@ window.__webview__.onUnbind(" +
 
 protected:
   virtual noresult navigate_impl(const std::string &url) = 0;
+  virtual noresult set_user_agent_impl(const std::string &user_agent) = 0;
   virtual result<void *> window_impl() = 0;
   virtual result<void *> widget_impl() = 0;
   virtual result<void *> browser_controller_impl() = 0;

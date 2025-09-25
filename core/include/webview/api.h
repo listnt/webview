@@ -159,6 +159,9 @@ WEBVIEW_API webview_error_t webview_set_size(webview_t w, int width, int height,
  */
 WEBVIEW_API webview_error_t webview_navigate(webview_t w, const char *url);
 
+WEBVIEW_API webview_error_t webview_set_user_agent(webview_t w,
+                                                   const char *user_agent);
+
 /**
  * Load HTML content into the webview.
  *

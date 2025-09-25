@@ -194,6 +194,17 @@ protected:
     return window_show();
   }
 
+  noresult set_user_agent_impl(const std::string &user_agent) override {
+    WebKitSettings *oldSettings =
+        webkit_web_view_get_settings(WEBKIT_WEB_VIEW(m_webview));
+
+    webkit_settings_set_user_agent(oldSettings, user_agent.c_str());
+
+    webkit_web_view_set_settings(WEBKIT_WEB_VIEW(m_webview), oldSettings);
+
+    return {};
+  }
+
   noresult navigate_impl(const std::string &url) override {
     webkit_web_view_load_uri(WEBKIT_WEB_VIEW(m_webview), url.c_str());
     return {};

@@ -447,6 +447,11 @@ protected:
     return {};
   }
 
+  noresult set_user_agent_impl(const std::string &user_agent) override {
+    // not implemented
+    return {};
+  }
+
   noresult eval_impl(const std::string &js) override {
     // TODO: Skip if no content has begun loading yet. Can't check with
     //       ICoreWebView2::get_Source because it returns "about:blank".

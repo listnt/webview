@@ -190,6 +190,17 @@ WEBVIEW_API webview_error_t webview_navigate(webview_t w, const char *url) {
   return api_filter([=] { return cast_to_webview(w)->navigate(url); });
 }
 
+WEBVIEW_API webview_error_t webview_set_user_agent(webview_t w,
+                                                   const char *user_agent) {
+  using namespace webview::detail;
+  if (!user_agent) {
+    return WEBVIEW_ERROR_INVALID_ARGUMENT;
+  }
+
+  return api_filter(
+      [=] { return cast_to_webview(w)->set_user_agent(user_agent); });
+}
+
 WEBVIEW_API webview_error_t webview_set_html(webview_t w, const char *html) {
   using namespace webview::detail;
   if (!html) {

@@ -225,6 +225,11 @@ protected:
 
     return {};
   }
+  noresult set_user_agent_impl(const std::string &user_agent) override {
+    // not implemented
+    return {};
+  }
+
   noresult set_html_impl(const std::string &html) override {
     objc::autoreleasepool arp;
     WKWebView_loadHTMLString(m_webview, NSString_stringWithUTF8String(html),
