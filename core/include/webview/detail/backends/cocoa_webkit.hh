@@ -21,6 +21,13 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
+ * 
+ * Additional Notice:
+ * Copyright (c) 2025 Aidar Kudabaev
+ * All rights reserved.
+ * This code is provided solely for the purpose of evaluating my
+ * candidacy for employment. It may not be used, copied, modified,
+ * or distributed without explicit permission from the author.
  */
 
 #ifndef WEBVIEW_BACKENDS_COCOA_WEBKIT_HH

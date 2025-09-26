@@ -1,3 +1,11 @@
+This project contains two types of code:
+
+1. Original components of webview liblary under the MIT License (see below).
+2. Original code by Aidar Kudabaev, Copyright (c) 2025.
+   Provided exclusively for candidate evaluation.
+   All rights reserved. Not for use, distribution, or modification
+   without explicit written permission.
+
 MIT License
 
 Copyright (c) 2017 Serge Zaitsev
