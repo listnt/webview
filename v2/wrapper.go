@@ -36,7 +36,7 @@ import (
 	"runtime"
 	"sync"
 	"unsafe"
-	C "webview"
+	C "github.com/listnt/webview"
 )
 
 func init() {
