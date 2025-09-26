@@ -1,4 +1,10 @@
-# requirements
+# Requirements
+
+A webview fork with additional ability to set user-agent. 
+
+```
+Right now supports setting user-agent only on linux 
+```
 ## Tools
 
 - Cmake
