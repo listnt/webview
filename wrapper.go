@@ -36,7 +36,6 @@ import (
 	"runtime"
 	"sync"
 	"unsafe"
-	C "github.com/listnt/webview"
 )
 
 func init() {
@@ -138,50 +137,50 @@ func New(debug bool) WebView { return NewWindow(debug, nil) }
 // here.
 func NewWindow(debug bool, window unsafe.Pointer) WebView {
 	w := &webview{}
-	w.w = C.Webview_create(boolToInt(debug), uintptr(window))
+	w.w = Webview_create(boolToInt(debug), uintptr(window))
 	return w
 }
 
 func (w *webview) Destroy() {
-	C.Webview_destroy(w.w)
+	Webview_destroy(w.w)
 }
 
 func (w *webview) Run() {
-	C.Webview_run(w.w)
+	Webview_run(w.w)
 }
 
 func (w *webview) Terminate() {
-	C.Webview_terminate(w.w)
+	Webview_terminate(w.w)
 }
 
 func (w *webview) Window() unsafe.Pointer {
-	return unsafe.Pointer(C.Webview_get_window(w.w))
+	return unsafe.Pointer(Webview_get_window(w.w))
 }
 
 func (w *webview) Navigate(url string) {
-	C.Webview_navigate(w.w, url)
+	Webview_navigate(w.w, url)
 }
 
 func (w *webview) SetHtml(html string) {
-	C.Webview_set_html(w.w, html)
+	Webview_set_html(w.w, html)
 }
 
 func (w *webview) SetTitle(title string) {
-	C.Webview_set_title(w.w, title)
+	Webview_set_title(w.w, title)
 }
 
 func (w *webview) SetSize(width int, height int, hint Hint) {
-	C.Webview_set_size(w.w, width, height, C.Webview_hint_t(hint))
+	Webview_set_size(w.w, width, height, Webview_hint_t(hint))
 }
 
 func (w *webview) Init(js string) {
-	C.Webview_init(w.w, js)
+	Webview_init(w.w, js)
 }
 
 func (w *webview) Eval(js string) {
-	C.Webview_eval(w.w, js)
+	Webview_eval(w.w, js)
 }
 
 func (w *webview) SetUserAgent(userAgent string) {
-	C.Webview_set_user_agent(w.w, userAgent)
+	Webview_set_user_agent(w.w, userAgent)
 }

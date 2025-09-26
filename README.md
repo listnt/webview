@@ -49,7 +49,7 @@ In addition to the dependencies mentioned earlier in this document for developin
   * Doxygen
   * Graphvis
 
-# how to compile 
+# How to compile 
 
 ```
 make build
